@@ -1,21 +1,18 @@
 package com.pmart5a.springhibernate.repository;
 
 import com.pmart5a.springhibernate.entity.Person;
-import org.springframework.stereotype.Repository;
+import com.pmart5a.springhibernate.entity.PersonId;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import java.util.List;
+import java.util.Optional;
 
-@Repository
-public class PersonRepository {
 
-    @PersistenceContext
-    private EntityManager entityManager;
+public interface PersonRepository extends JpaRepository<Person, PersonId> {
 
-    public List<Person> getPersonByCity(String city) {
-        return entityManager.createQuery("select p from Person p where p.cityOfLiving = :city", Person.class)
-                .setParameter("city", city)
-                .getResultList();
-    }
+    List<Person> findByCityOfLiving(String city);
+
+    List<Person> findByPersonIdAgeLessThanOrderByPersonIdAge(int age);
+
+    List<Optional<Person>> findByPersonIdNameAndPersonIdSurname(String name, String surname);
 }

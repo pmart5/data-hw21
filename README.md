@@ -1,7 +1,7 @@
 ﻿### Модуль "Хранение данных и организация безопасности". Блок 2. JPA.
-Решение ДЗ по теме: "ORM, Hibernate (минусы и плюсы), Entity Lifecycle, Embedding, Relationships"
+Решение ДЗ по теме: "Spring JPA Repositories, JPQL"
 
-* Задача 2.1 DAO слой c Hibernate. ([Условие здесь](https://github.com/netology-code/jd-homeworks/blob/master/hibernate/task1/README.md))
+* Задача 2.2 DAO слой c JPA Repositories. ([Условие здесь](https://github.com/netology-code/jd-homeworks/blob/master/spring-jpa/task1/README.md))
 
 (При запуске приложения создаётся схема с пустой таблицей persons.
 Для заполнения таблицы тестовыми данными необходимо остановить приложение.
